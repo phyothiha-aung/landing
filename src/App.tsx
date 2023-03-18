@@ -1,26 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Container, CssBaseline } from "@mui/material";
+import CallOut from "./components/CallOut";
+import Footer from "./components/Footer";
+import Hero from "./components/Hero";
+import Intro from "./components/Intro";
+import Navbar from "./components/Navbar";
+import Projects from "./components/Projects";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <CssBaseline />
+      <Navbar />
+      <Container maxWidth="lg">
+        <Hero />
+        <Intro />
+      </Container>
+      <Projects />
+      <CallOut />
+      <Footer />
+    </>
   );
-}
+};
 
 export default App;
